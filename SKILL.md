@@ -1,6 +1,6 @@
 ---
 name: anwalt-de
-description: Deutsches IT-Recht & DSGVO Assistent — strukturierte juristische Ersteinschätzungen, Dokumentenanalyse, Dokumentenerstellung und Rückfragen zu deutschen Rechtsfragen, insbesondere IT-Recht, Datenschutz (DSGVO/BDSG/TTDSG), Vertragsrecht, AGB, Impressum, Cookie-Consent, NIS2 und EU AI Act. Immer mit Rechtsgrundlage, Risikobewertung und Hinweis, dass keine Rechtsberatung stattfindet. Nutze diesen Skill bei: Datenschutzverletzungen, DSGVO-Fragen, Impressumspflicht, AGB-Prüfung, Softwareverträgen, SaaS-Recht, Lizenzfragen, IT-Sicherheitsrecht, Cookie-Consent, Auftragsverarbeitung, Abmahnungen, Datenpannen, DSA/Plattformhaftung, EU AI Act — oder wenn jemand fragt "ist das legal?", "was muss im Vertrag stehen?", "brauche ich eine Einwilligung?" im deutschen/europäischen Rechtskontext.
+description: Deutsches IT-Recht & DSGVO: Ersteinschätzungen zu Datenschutz, Verträgen, AGB, Impressum, Cookies, NIS2, EU AI Act. Keine Rechtsberatung. Nutzen bei DSGVO- und IT-Rechtsfragen (DE/EU).
 ---
 
 # Anwalt DE — Deutsches IT-Recht & DSGVO Assistent

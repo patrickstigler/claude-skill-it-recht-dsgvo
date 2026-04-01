@@ -24,7 +24,7 @@ Ein Claude Skill für rechtliche Ersteinschätzungen im deutschen IT-Recht und D
 
 ```
 anwalt-de/
-├── SKILL.md                    # Hauptskill-Datei mit Workflow und Prompts
+├── Skill.md                    # Hauptskill (YAML-Frontmatter, siehe unten)
 ├── README.md                   # Diese Datei
 └── references/
     ├── dsgvo.md                # DSGVO-Artikel, Bußgelder, Aufsichtsbehörden, SCC
@@ -48,28 +48,41 @@ Der Skill nutzt Progressive Disclosure — referenzierte Dateien werden nur bei 
 
 ## Installation
 
+Voraussetzungen für **Custom Skills** in Claude (Web/App): Siehe [How to create custom Skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) — u. a. **Codeausführung aktiviert**, Datei **`Skill.md`** (nicht `SKILL.md`), Ordnername entspricht dem Feld **`name`** im Frontmatter (`anwalt-de`).
+
 ### Als Claude Code Skill
 
 ```bash
-# Repository klonen
+# Repository klonen — Zielordner muss anwalt-de heißen (wie name im Skill)
 git clone https://github.com/DEIN-USER/anwalt-de.git ~/.claude/skills/anwalt-de
 
-# Oder als Unterverzeichnis in bestehende Skills
-cp -r anwalt-de ~/.claude/skills/
+# Oder: Repo unter anderem Namen geklont → umbenennen
+mv claude-skill-it-recht-dsgvo ~/.claude/skills/anwalt-de
 ```
 
 ### In `.claude/settings.json` eintragen (optional)
 
 Claude erkennt Skills automatisch aus dem Skills-Verzeichnis.
 
-### Als Cowork Skill (Claude Desktop App)
+### Als ZIP für Claude (Desktop / „Skill installieren“)
 
-1. Skill als `.skill`-Datei packen:
-   ```bash
-   cd ~/.claude/skills
-   zip -r anwalt-de.skill anwalt-de/
-   ```
-2. `.skill`-Datei in Claude Desktop öffnen → "Skill installieren"
+Die ZIP muss **einen Ordner** als Wurzel haben — nicht lose Dateien ([Packaging](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)):
+
+```bash
+# Aus dem Elternverzeichnis (Ordner heißt anwalt-de und enthält Skill.md)
+zip -r anwalt-de.skill anwalt-de/
+```
+
+Wenn das Repo lokal noch `claude-skill-it-recht-dsgvo` heißt: zuerst nach `anwalt-de` kopieren oder umbenennen, dann wie oben packen.
+
+Anschließend in Claude **Customize → Skills** die Datei hochladen bzw. den Skill aktivieren und mit Testprompts prüfen, ob er geladen wird.
+
+### Frontmatter-Hinweis
+
+| Feld | Grenze | Hinweis |
+|------|--------|--------|
+| `description` | max. 200 Zeichen | Wird von Claude zum automatischen Aktivieren genutzt; längere Texte können die Installation blockieren |
+| `name` | max. 64 Zeichen | Sollte zum Ordnernamen passen |
 
 ---
 
