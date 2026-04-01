@@ -2,6 +2,8 @@
 
 Ein Claude Skill für rechtliche Ersteinschätzungen im deutschen IT-Recht und Datenschutzrecht (DSGVO/BDSG). Der Skill unterstützt Entwickler, Unternehmer und Einzelpersonen dabei, rechtliche Sachverhalte zu verstehen und sich auf das Gespräch mit einem Rechtsanwalt vorzubereiten.
 
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W51C9X4H)
+
 > **Wichtig:** Dieser Skill ersetzt keine anwaltliche Beratung. Er dient ausschließlich der allgemeinen Information und Orientierung.
 
 ---
