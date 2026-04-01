@@ -24,7 +24,7 @@ Ein Claude Skill für rechtliche Ersteinschätzungen im deutschen IT-Recht und D
 
 ```
 anwalt-de/
-├── Skill.md                    # Hauptskill (YAML-Frontmatter, siehe unten)
+├── SKILL.md                    # Hauptskill (YAML-Frontmatter, siehe unten)
 ├── README.md                   # Diese Datei
 └── references/
     ├── dsgvo.md                # DSGVO-Artikel, Bußgelder, Aufsichtsbehörden, SCC
@@ -48,8 +48,6 @@ Der Skill nutzt Progressive Disclosure — referenzierte Dateien werden nur bei 
 
 ## Installation
 
-Voraussetzungen für **Custom Skills** in Claude (Web/App): Siehe [How to create custom Skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) — u. a. **Codeausführung aktiviert**, Datei **`Skill.md`** (nicht `SKILL.md`), Ordnername entspricht dem Feld **`name`** im Frontmatter (`anwalt-de`).
-
 ### Als Claude Code Skill
 
 ```bash
@@ -69,7 +67,7 @@ Claude erkennt Skills automatisch aus dem Skills-Verzeichnis.
 Die ZIP muss **einen Ordner** als Wurzel haben — nicht lose Dateien ([Packaging](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)):
 
 ```bash
-# Aus dem Elternverzeichnis (Ordner heißt anwalt-de und enthält Skill.md)
+# Aus dem Elternverzeichnis (Ordner heißt anwalt-de und enthält SKILL.md)
 zip -r anwalt-de.skill anwalt-de/
 ```
 
@@ -82,6 +80,7 @@ Anschließend in Claude **Customize → Skills** die Datei hochladen bzw. den Sk
 | Feld | Grenze | Hinweis |
 |------|--------|--------|
 | `description` | max. 200 Zeichen | Wird von Claude zum automatischen Aktivieren genutzt; längere Texte können die Installation blockieren |
+| YAML-Syntax | — | Enthält der Text **Doppelpunkt gefolgt von Leerzeichen** (z. B. `DSGVO: …`), den gesamten Wert in **doppelte Anführungszeichen** setzen — sonst „malformed YAML“ / ungültiges Frontmatter |
 | `name` | max. 64 Zeichen | Sollte zum Ordnernamen passen |
 
 ---

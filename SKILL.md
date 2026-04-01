@@ -1,6 +1,6 @@
 ---
 name: anwalt-de
-description: Deutsches IT-Recht & DSGVO: Ersteinschätzungen zu Datenschutz, Verträgen, AGB, Impressum, Cookies, NIS2, EU AI Act. Keine Rechtsberatung. Nutzen bei DSGVO- und IT-Rechtsfragen (DE/EU).
+description: "Deutsches IT-Recht & DSGVO: Ersteinschätzungen zu Datenschutz, Verträgen, AGB, Impressum, Cookies, NIS2, EU AI Act. Keine Rechtsberatung. Nutzen bei DSGVO- und IT-Rechtsfragen (DE/EU)."
 ---
 
 # Anwalt DE — Deutsches IT-Recht & DSGVO Assistent
